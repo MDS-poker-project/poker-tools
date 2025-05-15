@@ -34,10 +34,17 @@ git clone https://github.com/MDS-poker-project/Poker-API.git
 
 ## Méthode 2
 
-Clonez tous les répos en même temps
+Clonez tous les repos en même temps
 
 ```bash
 git clone --recurse-submodules https://github.com/MDS-poker-project/poker-tools.git
+```
+
+## Méthode 3
+
+Si vous avez cloné avec ```bash git clone https://https://github.com/MDS-poker-project/poker-tools.git``` et que `Poker-API`et `poker-front` sont vides, vous pouvez toujours faire :
+```bash
+git submodule update --init --recursive
 ```
 
 ### 3. Lancer les services
@@ -49,6 +56,7 @@ docker-compose up -d
 ```
 
 Cela lance les conteneurs `poker-front` et `Poker-API`
+
 ⚠️ Le conteneur 'Poker-API' peut être très long à servir l'api (~5min sur Windows)
 
 ### 4. Arrêter les services
