@@ -2,6 +2,16 @@
 
 Ce dépôt contient les outils d’orchestration pour le projet **Poker**, notamment le fichier `docker-compose.yml` permettant de lancer les services **API** et **Front-end** en local.
 
+## Description
+
+Ce projet est une application web (front, back, db) de poker. Il s'inscrit dans le cadre de notre formation chez MyDigitalSchool ayant pour objectif de créer une application web complète.
+
+- Front : **React**
+- Back : **Nest**
+- Database : **Sqlite**
+- Documentation : **Swagger**
+- Tests : **Jest & Swagger**
+
 ## 🗂 Structure du projet
 
 L’arborescence du projet est la suivante (les trois dépôts sont clonés dans un même dossier parent) :
@@ -24,12 +34,20 @@ L’arborescence du projet est la suivante (les trois dépôts sont clonés dans
 
 ## Méthode 1
 
-Clonez dans un premier temps 'poker-tools' puis au sein de ce dossier, clonez `poker-front` et `Poker-API`
-
+Clonez dans un premier temps 'poker-tools' :
 ```bash
 git clone https://github.com/MDS-poker-project/poker-tools.git
-git clone https://github.com/MDS-poker-project/poker-front.git
-git clone https://github.com/MDS-poker-project/Poker-API.git
+```
+
+Ensuite, naviguez vers ce dossier :
+```bash
+cd poker-tools
+```
+
+Puis clonez `poker-front` et `Poker-API` grâce aux sous modules :
+
+```bash
+git submodule update --init --recursive
 ```
 
 ## Méthode 2
@@ -38,13 +56,6 @@ Clonez tous les repos en même temps
 
 ```bash
 git clone --recurse-submodules https://github.com/MDS-poker-project/poker-tools.git
-```
-
-## Méthode 3
-
-Si vous avez cloné avec ```bash git clone https://https://github.com/MDS-poker-project/poker-tools.git``` et que `Poker-API`et `poker-front` sont vides, vous pouvez toujours faire :
-```bash
-git submodule update --init --recursive
 ```
 
 ### 3. Lancer les services
@@ -68,5 +79,5 @@ docker-compose down
 ```
 
 ## Auteurs
-Ibragimova Maria
-Boutrois Benjamin
+- Ibragimova Maria
+- Boutrois Benjamin
