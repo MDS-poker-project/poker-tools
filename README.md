@@ -10,7 +10,7 @@ Ce projet est une application web (front, back, db) de poker. Il s'inscrit dans 
 - Back : **Nest**
 - Database : **Sqlite**
 - Documentation : **Swagger**
-- Tests : **Jest & Swagger**
+- Tests : **Jest & Cypress**
 
 ## 🗂 Structure du projet
 

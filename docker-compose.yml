@@ -11,6 +11,9 @@ services:
             - './poker-front:/var/www/html'
         working_dir: '/var/www/html'
         command: sh -c "npm install && npm run dev"
+        environment:
+            - VITE_ORIGIN=http://localhost:5173
+            - VITE_PORT=5173
 
     poker.back:
         container_name: poker-api

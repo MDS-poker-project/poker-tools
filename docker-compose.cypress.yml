@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  poker.front:
+    container_name: poker-front
+    image: 'node:24.0.1-alpine3.20'
+    ports:
+      - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
+    networks:
+      - poker_app
+    volumes:
+      - './poker-front:/var/www/html'
+    working_dir: '/var/www/html'
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - VITE_ORIGIN=http://poker-front:5173
+      - VITE_PORT=5173
+      - CYPRESS_FRONT=1
+
+  cypress:
+    image: cypress/included:14.3.0
+    container_name: cypress-e2e
+    depends_on:
+      - poker.front
+    working_dir: /e2e
+    volumes:
+      - ./poker-front:/e2e
+    environment:
+      - CYPRESS_baseUrl=http://poker-front:5173
+    networks:
+      - poker_app
+    command: [ "npx", "cypress", "run" ]
+
+networks:
+  poker_app:
+    external: false
