@@ -19,14 +19,25 @@ L’arborescence du projet est la suivante (les trois dépôts sont clonés dans
 ### 1. Pré-requis
 
 - [Docker](https://www.docker.com/) installé et opérationnel
-- Clonez dans un premier temps 'poker-tools' puis au sein de ce dossier, clonez `poker-front` et `Poker-API`
 
 ### 2. Clonage des dépôts
+
+## Méthode 1
+
+Clonez dans un premier temps 'poker-tools' puis au sein de ce dossier, clonez `poker-front` et `Poker-API`
 
 ```bash
 git clone https://github.com/MDS-poker-project/poker-tools.git
 git clone https://github.com/MDS-poker-project/poker-front.git
 git clone https://github.com/MDS-poker-project/Poker-API.git
+```
+
+## Méthode 2
+
+Clonez tous les répos en même temps
+
+```bash
+git clone --recurse-submodules https://github.com/MDS-poker-project/poker-tools.git
 ```
 
 ### 3. Lancer les services
