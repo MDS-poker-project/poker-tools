@@ -70,7 +70,11 @@ Cela lance les conteneurs `poker-front` et `Poker-API`
 
 ⚠️ Le conteneur 'Poker-API' peut être très long à servir l'api (~5min sur Windows)
 
-### 4. Arrêter les services
+### 4. Accéder au site
+
+Le front est accessible à `http://localhost:5173`
+
+### 5. Arrêter les services
 
 Depuis le dossier `poker-tools`, exécuter :
 
