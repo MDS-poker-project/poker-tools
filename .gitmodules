@@ -1,0 +1,6 @@
+[submodule "poker-front"]
+	path = poker-front
+	url = https://github.com/MDS-poker-project/poker-front.git
+[submodule "Poker-API"]
+	path = Poker-API
+	url = https://github.com/MDS-poker-project/Poker-API.git
